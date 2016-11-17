@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>UXplayer</title>
+<link type="text/css" rel="stylesheet" href="uxplayer/css/common.css" />
+<script src="uxplayer/js/move.js" type="text/javascript"></script>
+<script type="text/javascript">
+window.onload = function()
+{
+	var oDiv1 = document.getElementById('div1');
+	var oDiv2 = document.getElementById('div2');
+	var oDiv3 = document.getElementById('div3');
+	var oHeader = document.getElementById('header');
+ 	var oHeaderlink = document.getElementById('headerlink');
+	var oHeadericon = document.getElementById('headericon');
+	var oHspan1 = document.getElementById('hspan1');
+	var oHspan2 = document.getElementById('hspan2');
+	var em1 = oDiv1.getElementsByTagName('em')[0];
+	var em2 = oDiv2.getElementsByTagName('em')[0];
+
+
+ 	var pos1 = pos2 = 0;
+
+ 	function maple(a,b){
+		var oTxt1 = document.getElementById('txt1');
+		var oTxt2 = document.getElementById('txt2');
+	 	
+	 	function showtxt(obj,txt,json){
+	 		obj.style.display='block';
+			obj.innerHTML=txt;
+			startMove(obj,json);
+	 	}
+	 	var time=0;
+
+	 	time=time+1000;
+		setTimeout(function(){showtxt(oTxt1,'<font color="#f44336">感性 创意</font>',{opacity:100})},300);
+
+	 	time=time+1000;
+ 		setTimeout(function(){showtxt(oTxt2,'理性 严谨',{opacity:100})},1000);
+
+	 	time=time+1000;
+ 		setTimeout(function(){showtxt(oTxt2,'理性 严谨',{opacity:0})},2000);
+
+	 	time=time+3000;
+ 		setTimeout(function(){showtxt(oTxt2,'还要能复用',{opacity:100})},3000);
+
+	 	time=time+1000;
+		setTimeout(function(){showtxt(oTxt1,'<font color="#f44336">感性 创意</font>',{opacity:0})},4500);
+ 		setTimeout(function(){showtxt(oTxt2,'还要能复用',{top:40,opacity:100})},5100);
+ 		// setTimeout(function(){showtxt(oTxt1,'<font color="#f44336">做不到！</font>',{top:140,opacity:0})},5100);
+
+	 	time=time+1000;
+ 		setTimeout(function(){showtxt(oTxt1,'<font color="#f44336">做不到！</font>',{top:140,opacity:100})},5600);
+ 		setTimeout(function(){showtxt(oTxt1,'<font color="#f44336">做不到！</font>',{top:140,opacity:0})},7100);
+ 		setTimeout(function(){showtxt(oTxt2,'还要能复用',{top:40,opacity:0})},7100);
+611515
+	 	// time=time+1000;
+ 		// setTimeout(function(){showtxt(oTxt2,'My',{top:40,opacity:100})},7900);
+ 		// setTimeout(function(){showtxt(oTxt1,'World',{top:140,opacity:100})},7900);
+
+	 	// time=time+1000;
+ 		// setTimeout(function(){showtxt(oTxt2,'My',{top:40,opacity:0})},9000);
+ 		// setTimeout(function(){showtxt(oTxt1,'World',{top:140,opacity:0})},9000);
+
+	 	time=time+1000;
+ 		setTimeout(function(){showtxt(oTxt2,'<del><font color="#611515">no more conflicts</font></del>',{top:40,opacity:88})},7900);
+ 		setTimeout(function(){showtxt(oTxt1,'<strong><font color="#611515">let me moderate</font></strong>',{top:140,opacity:88})},8900);
+
+ 		setTimeout(function(){showtxt(oTxt2,'<del><font color="#611515">no more conflicts</font></del>',{top:40,opacity:0})},11000);
+
+ 		setTimeout(function(){showtxt(oTxt1,'<strong><font color="#611515">let me moderate</font></strong>',{top:140,opacity:0})},11000);
+
+ 		// setTimeout(function(){em1.innerHTML='<a href="http://www.UXplayer.com">mapleqiqi.com</a>'},15500);
+ 		setTimeout(function(){startMove(oDiv3,{opacity:100})},12000);
+ 		// setTimeout(function(){startMove(oHeader,{top:140,opacity:100})},15500);
+ 		setTimeout(function(){startMove(oHeader,{bottom:200,opacity:100})},12000);
+ 		setTimeout(function(){startMove(oHspan1,{opacity:0})},12000);
+ 		setTimeout(function(){startMove(oHspan2,{opacity:0})},12000);
+
+ 		// setTimeout(function(){startMove(oIcon1,{opacity:100})},500);
+ 		// setTimeout(function(){startMove(oIcon2,{opacity:100})},500);
+ 		// setTimeout(function(){startMove(oIcon3,{opacity:100})},500);
+ 		setTimeout(function(){startMove(oHeaderlink,{opacity:100})},12000);
+ 		setTimeout(function(){startMove(oHeadericon,{opacity:100})},12000);
+
+ 		//setTimeout(function(){oTxt1.style.color='#ef4034'},14000);
+ 		//setTimeout(function(){showtxt(oTxt1,'<strong>Hello Maple</strong>',{top:140,opacity:100})},14000);
+ 
+ 	 
+
+ 	}
+ 
+
+	oDiv1.onmouseover = function() 
+	{
+		if (pos1 == 0) {
+		startMove(oDiv1,{opacity:66});
+		startMove(em1,{opacity:100});
+		}
+ 	};
+ 	oDiv1.onmouseout = function() 
+	{
+		if (pos1 == 0) {
+		startMove(oDiv1,{opacity:100});
+		startMove(em1,{opacity:0});
+		}
+ 	} 
+ 	oDiv1.onclick = function() 
+	{		
+		pos1=1;
+		startMove(oDiv1,{left:450, opacity:66},function(){
+	 		if(oDiv1.style.left==oDiv2.style.left){
+	 		startMove(oDiv2,{opacity:0});
+	 		startMove(oDiv1,{opacity:0});
+	 		maple();
+	 		}
+		});
+		oDiv1.style.cursor = 'default';
+
+  	}
+ 
+
+	oDiv2.onmouseover = function() 
+	{
+		if (pos2 == 0) {
+		startMove(oDiv2,{opacity:66});
+		startMove(em2,{opacity:100});
+		}
+ 	}
+ 	oDiv2.onmouseout = function() 
+	{	
+		if (pos2 == 0) {
+		startMove(oDiv2,{opacity:100});
+		startMove(em2,{opacity:0});
+ 		}
+  	}
+ 	oDiv2.onclick = function() 
+	{
+		pos2=1;
+		startMove(oDiv2,{left:450, opacity:66},function(){
+	 		if(oDiv1.style.left==oDiv2.style.left){
+	 		startMove(oDiv2,{opacity:0});
+	 		startMove(oDiv1,{opacity:0});
+	 		maple();
+	 		}
+		});
+		oDiv2.style.cursor = 'default';
+ 	}
+
+}
+
+</script>
+</head>
+
+<body>
+
+<div id="header">
+	<div id="headericon">
+		<span id="iconimg"><a href="http://www.jianshu.com/notebooks/5223164/latest" target="_blank"  width="76" height="76"><img src="uxplayer/img/icon1.png" width="76" height="76"></a></span>  
+		<span id="hspan"><img src="uxplayer/img/span0.png"></span>
+		<span id="iconimg"><a href="http://www.lofter.com/blog/nosuns" target="_blank"><img src="uxplayer/img/icon2.png" width="76" height="76"></a></span> 
+		<span id="hspan"><img src="uxplayer/img/span0.png"></span>
+		<span id="iconimg"><a href="https://pan.baidu.com/s/1o8AmEGa" target="_blank"><img src="uxplayer/img/icon3.png" width="76" height="76"></a></span>
+	</div>	
+	<div id="headerlink">
+		<span id="iconlink"><a href="http://www.jianshu.com/notebooks/5223164/latest" target="_blank"><img src="uxplayer/img/txt1.png"></a></span>    <span id="hspan1"><img src="uxplayer/img/span.png"></span>
+		<span id="iconlink"><a href="http://www.lofter.com/blog/nosuns" target="_blank"><img src="uxplayer/img/txt2.png"></a> </span>   <span id="hspan2"><img src="uxplayer/img/span.png"></span>
+		<span id="iconlink"><a href="https://pan.baidu.com/s/1o8AmEGa" target="_blank"><img src="uxplayer/img/txt3.png"></a> </span>
+	</div>	
+</div>
+
+<div id="div0">
+	<div id="div1"><a class="a01">&nbsp;<em>UI Designer</em></a></div>
+	<div id="div3"><a class="a03"><img src="uxplayer/img/logo_fullname_black2.png"></a></div>
+    <div id="div2"><a class="a02">&nbsp;<em>Software Developer</em></a></div>
+    <div id="txt1">11111</div>
+    <div id="txt2">11111</div>
+</div>
+
+<div id="footer">
+The mogic makes mogicians excited! 
+</div>
+
+</body>
+</html>
