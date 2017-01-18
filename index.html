@@ -26,6 +26,11 @@ window.onload = function()
 	var clk = 0 ;
 
  	var pos1 = pos2 = 0;
+	// setTimeout(function(){uxplayer()},3000);
+
+	if(document.readyState == "complete") {
+ 		uxplayer();
+	}
 
  	function uxplayer(a,b){
  		var oTxt1 = document.getElementById('txt1');
@@ -41,81 +46,11 @@ window.onload = function()
 	 	var time=time1=time2=0;
 
 
-	 	time=time+300;
+	 	time=1000;
+	 	time1=time+500;
+	 	time2=time+1200;
 
-		setTimeout(function(){startMove(oDiv1,{opacity:100})},time);
-		setTimeout(function(){startMove(em1,{opacity:100})},time);
-		setTimeout(function(){startMove(oDiv2,{opacity:100})},time);
-		setTimeout(function(){startMove(em2,{opacity:100})},time);
-	 	time=time+300;
-
-		setTimeout(function(){startMove(oDiv1,{opacity:100})},time);
-		setTimeout(function(){startMove(em1,{opacity:100})},time);
-		setTimeout(function(){startMove(oDiv2,{opacity:100})},time);
-		setTimeout(function(){startMove(em2,{opacity:100})},time);
-	 	time=time+800;
-
- 		setTimeout(function(){startMove(oDiv1,{left:450, opacity:30})},time);
- 		setTimeout(function(){startMove(oDiv2,{left:450, opacity:30})},time);
-	 	time=time+1000;
-
-		setTimeout(function(){startMove(oDiv1,{opacity:0})},time);
-		setTimeout(function(){startMove(em1,{opacity:0})},time);
-		setTimeout(function(){startMove(oDiv2,{opacity:0})},time);
-		setTimeout(function(){startMove(em2,{opacity:0})},time);
-	 	time=time+300;
-
-		setTimeout(function(){startMove(oDiv1,{opacity:0})},time);
-		setTimeout(function(){startMove(em1,{opacity:0})},time);
-		setTimeout(function(){startMove(oDiv2,{opacity:0})},time);
-		setTimeout(function(){startMove(em2,{opacity:0})},time);
-	 	time=time+600;
-
-		setTimeout(function(){showtxt(oTxt1,'<font color="#f44336">看这个效果 多有创意</font>',{opacity:100})},time);
-	 	time=time+300;
-
-		setTimeout(function(){showtxt(oTxt1,'<font color="#f44336">看这个效果 多有创意</font>',{opacity:100})},time);
-	 	time=time+1000;
-
- 		setTimeout(function(){showtxt(oTxt2,'耗内存 逻辑不顺 还没法复用',{opacity:100})},time);
-	 	time=time+300;
-
- 		setTimeout(function(){showtxt(oTxt2,'耗内存 逻辑不顺 还没法复用',{opacity:100})},time);
-	 	time=time+1000;
-
- 		setTimeout(function(){showtxt(oTxt2,'耗内存 逻辑不顺 还没法复用',{opacity:0})},time);
-	 	time=time+800;
-
- 		setTimeout(function(){showtxt(oTxt2,'总之实现不了',{opacity:100})},time);
-	 	time=time+1500;
-
-		setTimeout(function(){showtxt(oTxt1,'<font color="#f44336">看这个效果 多有创意</font>',{opacity:0})},time);
-	 	time=time+600;
-
- 		setTimeout(function(){showtxt(oTxt2,'总之实现不了',{top:40,opacity:100})},time);
-	 	time=time+500;
-
- 		setTimeout(function(){showtxt(oTxt1,'<font color="#f44336">心好痛 %>_<%</font>',{top:140,opacity:100})},time);
- 		time=time+500;
- 		setTimeout(function(){showtxt(oTxt1,'<font color="#f44336">心好痛 %>_<%</font>',{top:140,opacity:100})},time);
- 		time=time+1000;
- 		setTimeout(function(){showtxt(oTxt1,'<font color="#f44336">心好痛 %>_<%</font>',{top:140,opacity:0})},time);
- 		setTimeout(function(){showtxt(oTxt2,'总之实现不了',{top:40,opacity:0})},time);
-	 	time=time+800;
-
- 		setTimeout(function(){showtxt(oTxt2,'<del><font color="#611515">消 除 鸿 沟</font></del>',{top:40,opacity:100})},time);
-	 	time=time+1000;
-
- 		setTimeout(function(){showtxt(oTxt1,'<strong><font color="#611515">&nbsp;&nbsp;&nbsp;你需要一个「翻译」</font></strong>',{top:140,opacity:100})},time);
-	 	time=time+1000;
-		setTimeout(function(){showtxt(oTxt2,'<del><font color="#611515">消 除 鸿 沟</font></del>',{top:40,opacity:100})},time);
- 		setTimeout(function(){showtxt(oTxt1,'<strong><font color="#611515">&nbsp;&nbsp;&nbsp;你需要一个「翻译」</font></strong>',{top:140,opacity:100})},time);
-	 	time=time+1500;
- 		setTimeout(function(){showtxt(oTxt2,'<del><font color="#611515">消 除 鸿 沟</font></del>',{top:40,opacity:0})},time);
- 		setTimeout(function(){showtxt(oTxt1,'<strong><font color="#611515">&nbsp;&nbsp;&nbsp;你需要一个「翻译」</font></strong>',{top:140,opacity:0})},time);
-	 	time1=time+1000;
-	 	time2=time+2000;
-
+ 		setTimeout(function(){startMove(oDivMid,{opacity:0})},time);
 
  		// setTimeout(function(){em1.innerHTML='<a href="http://www.UXplayer.com">uxplayer.com</a>'},15500);
  		setTimeout(function(){startMove(oDiv3,{opacity:100})},time1);
@@ -131,85 +66,14 @@ window.onload = function()
 
  	}
  
-  	oDivMid.onclick = function() 
+  	oDiv3.onmouseover = function() 
 	{	
 		if (clk == 0) {	
- 		startMove(oDivMid,{opacity:0});
  		uxplayer();
  		}
   	}
- //  	oDivMid.onmouseover = function() 
-	// {	
-	// 	startMove(oDiv1,{opacity:100});
-	// 	startMove(em1,{opacity:100});
-	// 	startMove(oDiv2,{opacity:100});
-	// 	startMove(em2,{opacity:100});
-
- //  	}
- //  	oDivMid.onmouseout = function() 
-	// {		
- 		
-	// 	startMove(oDiv1,{opacity:0});
-	// 	startMove(em1,{opacity:0});
-	// 	startMove(oDiv2,{opacity:0});
-	// 	startMove(em2,{opacity:0});
-
- //  	}
 
 
-	// oDiv1.onmouseover = function() 
-	// {
-	// 	if (pos1 == 0) {
-	// 	startMove(oDiv1,{opacity:66});
-	// 	startMove(em1,{opacity:66});
-	// 	}
- // 	};
- // 	oDiv1.onmouseout = function() 
-	// {
-	// 	if (pos1 == 0) {
-	// 	startMove(oDiv1,{opacity:100});
-	// 	startMove(em1,{opacity:100});
-	// 	}
- // 	} 
- // 	oDiv1.onclick = function() 
-	// {		
-	// 	pos1=1;
-	// 	startMove(oDiv1,{left:450, opacity:66},function(){
-	//  		if(oDiv1.style.left==oDiv2.style.left){
-	//  		startMove(oDiv2,{opacity:0});
-	//  		startMove(oDiv1,{opacity:0});
-	//  		uxplayer();
-	//  		}
-	// 	});
-	// 	oDiv1.style.cursor = 'default';
- //  	}
-
-	// oDiv2.onmouseover = function() 
-	// {
-	// 	if (pos2 == 0) {
-	// 	startMove(oDiv2,{opacity:66});
-	// 	startMove(em2,{opacity:66});
-	// 	}
- // 	}
- // 	oDiv2.onmouseout = function() 
-	// {	
-	// 	if (pos2 == 0) {
-	// 	startMove(oDiv2,{opacity:100});
-	// 	startMove(em2,{opacity:100});
- // 		}
- //  	}
- // 	oDiv2.onclick = function() 
-	// {
-	// 	pos2=1;
-	// 	startMove(oDiv2,{left:450, opacity:66},function(){
-	//  		if(oDiv1.style.left==oDiv2.style.left){
-	//  		startMove(oDiv2,{opacity:0});
-	//  		startMove(oDiv1,{opacity:0});
-	//  		uxplayer();
-	//  		}
-	// 	});
-	// 	oDiv2.style.cursor = 'default';
- // 	}
 
 }
 
@@ -222,7 +86,7 @@ window.onload = function()
 	<div id="headericon">
 		<span id="iconimg"><a href="http://www.jianshu.com/users/d0a228c18929/top_articles" target="_blank"  width="76" height="76"><img src="uxplayer/img/icon1.png" width="76" height="76"></a></span>  
 		<span id="hspan"><img src="uxplayer/img/span0.png"></span>
-		<span id="iconimg"><a href="https://pan.baidu.com/s/1o8AmEGa" target="_blank"><img src="uxplayer/img/icon3.png" width="76" height="76"></a></span>
+		<span id="iconimg"><a href="https://pan.baidu.com/s/1nvNP3TJ" target="_blank"><img src="uxplayer/img/icon3.png" width="76" height="76"></a></span>
 		<span id="hspan"><img src="uxplayer/img/span0.png"></span>
 		<span id="iconimg"><a href="http://www.lofter.com/blog/nosuns" target="_blank"><img src="uxplayer/img/icon2.png" width="76" height="76"></a></span> 
 
@@ -239,7 +103,11 @@ window.onload = function()
 <div id="div0">
 	<div id="div1"><a class="a01">&nbsp;<em>视觉设计</em></a></div>
 	<div id="div3"><a class="a03"><img src="uxplayer/img/logo_fullname_black2.png"></a></div>
-	<div id="divMid"><a>嫑 点 这</a></div>
+	<div id="divMid"><div class="spinner">
+  <div class="double-bounce1"></div>
+  <div class="double-bounce2"></div>
+</div>
+	</div>
 
     <div id="div2"><a class="a02">&nbsp;<em>程序开发</em></a></div>
     <div id="txt1">11111</div>
