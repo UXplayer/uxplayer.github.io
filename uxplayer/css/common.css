@@ -200,6 +200,15 @@ em {
     padding-top:50px;
     padding-bottom:5px;
 }
+.modao{
+    width:456px;
+    padding-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+/*    align-content: center;
+    align-self: center;*/
+}
+
 
 
 #hspan,#hspan1,#hspan2{
