@@ -11,16 +11,20 @@
 	var u = navigator.userAgent, 
 	isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1,
 	isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),
+	isWeiXin: ua.match(/MicroMessenger/i) == "micromessenger", //是否微信
 	urls = {
 		'android':'http://h5.haibaodatuan.com/apk/hbdj004.apk',
+		'weixin':'http://h5.haibaodatuan.com/img/weixinopen.png',
 		'ios':'https://itunes.apple.com/app/apple-store/id1435151701?pt=119272539&ct=h5test&mt=8',
 		'other':'https://haibaodatuan.com/'
 	};
 
-	if(isAndroid){
-		window.location.href=urls.android;
-	}else if(isiOS){
+	if(isiOS){
 		window.location.href=urls.ios;
+	}else if(isWeiXin){
+		window.location.href=urls.weixin;
+	}else if(isAndroid){
+		window.location.href=urls.android;
 	}else{
 		window.location.href=urls.other;
 	}
