@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>海豹电竞</title>
+<title>下载海豹电竞App</title>
 
 <meta name="msapplication-TileImage" content="uxplayer/favicon/cropped-x-icon-270x270.png" />
 
@@ -12,13 +12,11 @@
 	isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1,
 	isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),
 	urls = {
-		'android':'https://haibaodatuan.com/',
-		'ios':'https://www.modao.cc',
-		'other':'https://bing.com/'
+		'android':'http://h5.haibaodatuan.com/apk/hbdj004.apk',
+		'ios':'https://itunes.apple.com/app/apple-store/id1435151701?pt=119272539&ct=h5test&mt=8',
+		'other':'https://haibaodatuan.com/'
 	};
-	//三元运算
-	// window.location.href = isAndroid? urls.android : isiOS? urls.ios : urls.other;
-	//简化
+
 	if(isAndroid){
 		window.location.href=urls.android;
 	}else if(isiOS){
@@ -27,8 +25,6 @@
 		window.location.href=urls.other;
 	}
 
-
-		// 'ios':'https://itunes.apple.com/app/apple-store/id1435151701?pt=119272539&ct=h5test&mt=8',
 
 </script>
 
